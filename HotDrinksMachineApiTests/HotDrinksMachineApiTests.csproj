@@ -24,4 +24,10 @@
     <ProjectReference Include="..\HotDrinksMachineApi\HotDrinksMachineApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controller\" />
+    <Folder Include="NewFolder1\" />
+    <Folder Include="NewFolder\" />
+  </ItemGroup>
+
 </Project>

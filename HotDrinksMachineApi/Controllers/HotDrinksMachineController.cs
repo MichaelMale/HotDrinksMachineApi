@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using Microsoft.AspNetCore.Mvc;
 using HotDrinksMachineApi.Exceptions;
 using HotDrinksMachineApi.Models;
 
@@ -12,17 +10,14 @@ namespace HotDrinksMachineApi.Controllers
         [HttpGet("get-drink/{type}")]
         public ActionResult<HotDrink> GetDrink(DrinkType type)
         {
-            switch (type)
+            return type switch
             {
-                case DrinkType.Coffee:
-                    return new Coffee();
-                case DrinkType.Chocolate:
-                    return new Chocolate();
-                case DrinkType.LemonTea:
-                    return new LemonTea();
-                default:
-                    throw new InvalidDrinkTypeException(type + " is not a valid drink type.");
-            }
+                DrinkType.Coffee => new Coffee(),
+                DrinkType.Chocolate => new Chocolate(),
+                DrinkType.LemonTea => new LemonTea(),
+                DrinkType.HotDrink => new HotDrink(),
+                _ => throw new InvalidDrinkTypeException(type + " is not a valid drink type.")
+            };
         }
     }
 }
