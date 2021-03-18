@@ -14,8 +14,8 @@ namespace HotDrinksMachineApiTests.Models
         {
             // Arrange
 
-            HotDrink testHotDrink = new HotDrink();
-            List<string> expectedSteps = new List<string>
+            var testHotDrink = new HotDrink();
+            var expectedSteps = new List<string>
             {
                 "Boil some water"
             };
@@ -36,9 +36,9 @@ namespace HotDrinksMachineApiTests.Models
         {
             // Arrange
 
-            HotDrink testHotDrink = new Coffee();
+            var testHotDrink = new Coffee();
             var name = "Coffee";
-            List<string> expectedSteps = new List<string>
+            var expectedSteps = new List<string>
             {
                 "Boil some water",
                 "Brew the coffee grounds",
@@ -58,9 +58,9 @@ namespace HotDrinksMachineApiTests.Models
         {
             // Arrange
 
-            HotDrink testHotDrink = new LemonTea();
+            var testHotDrink = new LemonTea();
             var name = "Lemon Tea";
-            List<string> expectedSteps = new List<string>
+            var expectedSteps = new List<string>
             {
                 "Boil some water",
                 "Steep the water in the tea",
@@ -80,9 +80,9 @@ namespace HotDrinksMachineApiTests.Models
         {
             // Arrange
 
-            HotDrink testHotDrink = new Chocolate();
+            var testHotDrink = new Chocolate();
             var name = "Chocolate";
-            List<string> expectedSteps = new List<string>
+            var expectedSteps = new List<string>
             {
                 "Boil some water",
                 "Add drinking chocolate powder to the water",
