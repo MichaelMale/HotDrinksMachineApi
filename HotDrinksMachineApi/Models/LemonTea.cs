@@ -9,6 +9,7 @@ namespace HotDrinksMachineApi.Models
     {
         public LemonTea()
         {
+            Id = DrinkType.LemonTea;
             Name = "Lemon Tea";
             AddSteps();
         }

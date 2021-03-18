@@ -8,12 +8,16 @@ namespace HotDrinksMachineApi.Models
     public class HotDrink
     {
 
+        public DrinkType Id { get; set; }
         public string Name { get; set; }
         public List<string> Steps { get; set; }
 
         public virtual void AddSteps()
         {
-            Steps.Add("Boil some water");
+            Steps = new List<string>
+            {
+                "Boil some water"
+            };
         }
     }
 }
