@@ -10,28 +10,6 @@ namespace HotDrinksMachineApiTests.Models
     {
 
         [Fact]
-        public void AddSteps_WhenBaseClass_ShouldReturnCorrectData()
-        {
-            // Arrange
-
-            var testHotDrink = new HotDrink();
-            var expectedSteps = new List<string>
-            {
-                "Boil some water"
-            };
-
-            // Act
-
-            testHotDrink.AddSteps();
-
-            // Assert
-
-            testHotDrink.Steps.Should().BeEquivalentTo(expectedSteps);
-            testHotDrink.Name.Should().BeNullOrEmpty();
-            testHotDrink.Id.Should().Be(DrinkType.HotDrink);
-        }
-
-        [Fact]
         public void AddSteps_WhenCoffee_ShouldReturnCorrectData()
         {
             // Arrange
