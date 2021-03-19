@@ -5,7 +5,6 @@
     /// </summary>
     public enum DrinkType
     {
-        HotDrink,
         Chocolate,
         Coffee,
         LemonTea

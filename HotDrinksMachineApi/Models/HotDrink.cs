@@ -8,7 +8,7 @@ namespace HotDrinksMachineApi.Models
     /// <summary>
     /// Base class for all drinks that can be made using the HotDrinksMachineApi.
     /// </summary>
-    public class HotDrink
+    public abstract class HotDrink
     {
         /// <summary>
         /// Constructor for objects of type HotDrink.
@@ -16,7 +16,7 @@ namespace HotDrinksMachineApi.Models
         /// <param name="id">The ID pertinent to the type of drink.</param>
         /// <param name="name">The name of the drink.</param>
         /// <param name="image">Links to an image of the drink.</param>
-        public HotDrink(DrinkType id, string name, string image)
+        protected HotDrink(DrinkType id, string name, string image)
         {
             Id = id;
             Name = name;
@@ -26,7 +26,7 @@ namespace HotDrinksMachineApi.Models
         /// <summary>
         /// Default constructor for objects of type HotDrink.
         /// </summary>
-        public HotDrink()
+        protected HotDrink()
         {
         }
 

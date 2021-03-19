@@ -35,7 +35,6 @@ namespace HotDrinksMachineApi.Controllers
                 DrinkType.Coffee => new Coffee(),
                 DrinkType.Chocolate => new Chocolate(),
                 DrinkType.LemonTea => new LemonTea(),
-                DrinkType.HotDrink => new HotDrink(),
                 _ => throw new InvalidDrinkTypeException(type + " is not a valid drink type.")
             };
         }

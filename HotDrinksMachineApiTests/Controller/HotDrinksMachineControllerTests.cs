@@ -13,7 +13,6 @@ namespace HotDrinksMachineApiTests.Controller
         [InlineData(DrinkType.Coffee, typeof(Coffee))]
         [InlineData(DrinkType.Chocolate, typeof(Chocolate))]
         [InlineData(DrinkType.LemonTea, typeof(LemonTea))]
-        [InlineData(DrinkType.HotDrink, typeof(HotDrink))]
         public void GetDrink_ShouldReturnCorrectType(DrinkType drinkType, Type hotDrink)
         {
             // Arrange
