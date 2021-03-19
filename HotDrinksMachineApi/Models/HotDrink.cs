@@ -38,7 +38,7 @@ namespace HotDrinksMachineApi.Models
         /// <summary>
         /// Initialises the Steps instance variable with a new list, containing steps that are used across all hot drinks.
         /// </summary>
-        public virtual void AddSteps()
+        protected virtual void AddSteps()
         {
             Steps = new List<string>
             {

@@ -21,7 +21,7 @@ namespace HotDrinksMachineApi.Models
         /// <summary>
         /// Adds steps relative to coffee.
         /// </summary>
-        public sealed override void AddSteps()
+        protected sealed override void AddSteps()
         {
             base.AddSteps();
             Steps.AddRange(new List<string>
