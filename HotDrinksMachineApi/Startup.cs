@@ -27,11 +27,21 @@ namespace HotDrinksMachineApi
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HotDrinksMachineApi", Version = "v1" });
             });
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        // Currently points to a frontend using the default Angular port. Change this if the port that is being used is different to allow CORS. Uncomment below to allow CORS from any domain name.
+                        // builder.AllowAnyOrigin();
+                        builder.WithOrigins("http://localhost:4200");
+                    });
+            });
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,6 +57,8 @@ namespace HotDrinksMachineApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 

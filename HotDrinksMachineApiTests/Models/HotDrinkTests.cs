@@ -37,7 +37,8 @@ namespace HotDrinksMachineApiTests.Models
             // Arrange
 
             var testHotDrink = new Coffee();
-            var name = "Coffee";
+            const string expectedName = "Coffee";
+            const string expectedImage = "coffee.jpg";
             var expectedSteps = new List<string>
             {
                 "Boil some water",
@@ -49,7 +50,8 @@ namespace HotDrinksMachineApiTests.Models
             // Assert
 
             testHotDrink.Steps.Should().BeEquivalentTo(expectedSteps);
-            testHotDrink.Name.Should().Be(name);
+            testHotDrink.Name.Should().Be(expectedName);
+            testHotDrink.Image.Should().Be(expectedImage);
             testHotDrink.Id.Should().Be(DrinkType.Coffee);
         }
 
@@ -59,7 +61,8 @@ namespace HotDrinksMachineApiTests.Models
             // Arrange
 
             var testHotDrink = new LemonTea();
-            var name = "Lemon Tea";
+            const string expectedName = "Lemon Tea";
+            const string expectedImage = "lemon-tea.jpg";
             var expectedSteps = new List<string>
             {
                 "Boil some water",
@@ -71,7 +74,8 @@ namespace HotDrinksMachineApiTests.Models
             // Assert
 
             testHotDrink.Steps.Should().BeEquivalentTo(expectedSteps);
-            testHotDrink.Name.Should().Be(name);
+            testHotDrink.Name.Should().Be(expectedName);
+            testHotDrink.Image.Should().Be(expectedImage);
             testHotDrink.Id.Should().Be(DrinkType.LemonTea);
         }
 
@@ -81,7 +85,8 @@ namespace HotDrinksMachineApiTests.Models
             // Arrange
 
             var testHotDrink = new Chocolate();
-            var name = "Chocolate";
+            const string expectedName = "Chocolate";
+            const string expectedImage = "hot-chocolate.jpg";
             var expectedSteps = new List<string>
             {
                 "Boil some water",
@@ -92,7 +97,8 @@ namespace HotDrinksMachineApiTests.Models
             // Assert
 
             testHotDrink.Steps.Should().BeEquivalentTo(expectedSteps);
-            testHotDrink.Name.Should().Be(name);
+            testHotDrink.Name.Should().Be(expectedName);
+            testHotDrink.Image.Should().Be(expectedImage);
             testHotDrink.Id.Should().Be(DrinkType.Chocolate);
         }
 

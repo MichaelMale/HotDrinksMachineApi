@@ -2,18 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace HotDrinksMachineApi.Models
 {
+    /// <summary>
+    /// Models a hot chocolate drink.
+    /// </summary>
     public class Chocolate : HotDrink
     {
-        public Chocolate()
+        /// <summary>
+        /// Constructor for objects of type Chocolate.
+        /// </summary>
+        public Chocolate() : base(DrinkType.Chocolate, "Chocolate", "hot-chocolate.jpg")
         {
-            Id = DrinkType.Chocolate;
-            Name = "Chocolate";
             AddSteps();
         }
 
+        /// <summary>
+        /// Adds steps relative to hot chocolate.
+        /// </summary>
         public sealed override void AddSteps()
         {
             base.AddSteps();

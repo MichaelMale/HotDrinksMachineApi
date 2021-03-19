@@ -5,15 +5,22 @@ using System.Threading.Tasks;
 
 namespace HotDrinksMachineApi.Models
 {
+    /// <summary>
+    /// Models a coffee.
+    /// </summary>
     public class Coffee : HotDrink
     {
-        public Coffee()
+        /// <summary>
+        /// Constructor for objects of type Coffee.
+        /// </summary>
+        public Coffee() : base(DrinkType.Coffee, "Coffee", "coffee.jpg")
         {
-            Id = DrinkType.Coffee;
-            Name = "Coffee";
             AddSteps();
         }
-
+        
+        /// <summary>
+        /// Adds steps relative to coffee.
+        /// </summary>
         public sealed override void AddSteps()
         {
             base.AddSteps();
